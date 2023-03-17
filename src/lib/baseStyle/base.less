@@ -1,0 +1,220 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+//定位
+.pr {
+  position: relative;
+}
+
+.pa {
+  position: absolute;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+//clearfix清楚浮动
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: '';
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+//margin
+.marginCenter {
+  margin: 0 auto;
+}
+
+.ml5 {
+  margin-left: 5px;
+}
+
+.mr5 {
+  margin-right: 5px;
+}
+
+.mt5 {
+  margin-top: 5px;
+}
+
+.mb5 {
+  margin-bottom: 5px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.ml15 {
+  margin-left: 15px;
+}
+
+.mr15 {
+  margin-right: 15px;
+}
+
+.mt15 {
+  margin-top: 15px;
+}
+
+.mb15 {
+  margin-bottom: 15px;
+}
+
+//vant组件相关全局调整
+body {
+  .lr-btn {
+    height: 40px;
+    line-height: 40px;
+    background: #4f87f7;
+    font-size: 16px;
+    border: 0;
+    letter-spacing: 2px;
+
+    &.lr-disabled {
+      background: #f0f0f0;
+      border: 1px solid #e3e3e3;
+      color: #aaa;
+    }
+  }
+}
+
+#app {
+  .van-field__control:disabled {
+    color: #444 !important;
+    -webkit-text-fill-color: #444
+  }
+
+  //点击反馈
+  .ciie-clickable:active {
+    background: #f2f3f5;
+  }
+}
+
+.only-read-panel2 {
+  &:after {
+    background: rgba(0, 0, 0, .1);
+  }
+}
+
+.form-wrap.only-read-panel,
+.only-read-panel2 {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    z-index: 98;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  //右侧箭头
+  .arrow {
+    display: none;
+  }
+
+  .confirm-tips {
+    display: none !important;
+  }
+
+  // 自定义输入框
+  .cf-field-input {
+    text-align: right;
+    justify-content: flex-end;
+    padding-right: 0 !important;
+  }
+
+  //vant输入框
+  .van-field__control {
+    text-align: right;
+  }
+
+  // 不合格项目加减号
+  & .panel-inline-item .right-btn {
+    display: none !important;
+  }
+
+  & .cf-field-input-select {
+    & .van-field {
+      padding-right: 0 !important;
+    }
+  }
+}
+
+
+.btn-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: #f6f6f6;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+
+  .bf-cont {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    box-sizing: border-box;
+
+    .btn-left {
+      width: 90px;
+    }
+
+    .btn-right {
+      width: calc(100% - 100px);
+
+      &.w100 {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//防疫
+.yes-no {
+  margin: 0 5px;
+  color: #666;
+}
+
+//隐藏滚动条
+::-webkit-scrollbar {
+  // 直接复制黏贴到样式页.css，完美解决
+  display: none;
+  /* background-color:transparent; */
+}

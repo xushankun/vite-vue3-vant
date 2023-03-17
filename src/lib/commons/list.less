@@ -1,0 +1,166 @@
+.list-wrap {
+  width: 100vw;
+  min-height: 100vh;
+  background: #f1f2f5;
+
+  .cf-field {
+    position: relative;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 15px;
+    overflow: hidden;
+    color: #323233;
+    font-size: 14px;
+    background-color: #fff;
+
+    &:not(:last-child)::after {
+      position: absolute;
+      box-sizing: border-box;
+      content: ' ';
+      pointer-events: none;
+      right: 0;
+      bottom: 0;
+      left: 15px;
+      border-bottom: 1px solid #ebedf0;
+      -webkit-transform: scaleY(.5);
+      transform: scaleY(.5);
+    }
+
+    .cf-label {
+      min-width: 70px;
+    }
+
+    .cf-label.cf-label2 {
+      min-width: 70px;
+      width: 70px;
+    }
+
+    .cf-field-input {
+      min-height: 44px;
+      flex: auto;
+      display: flex;
+      align-items: center;
+
+      .cf-field-tag {
+        margin-right: 15px;
+      }
+
+      &.cf-field-step {
+
+        /*justify-content: flex-end;*/
+        .step-unit {
+          width: 40px;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    /*右箭头*/
+    &.active {
+      .cf-field-input {
+        padding-right: 20px;
+      }
+
+      .arrow {
+        height: 100%;
+        position: absolute;
+        right: 12px;
+        top: 0;
+
+        .iconfont {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          color: #999;
+          font-size: 16px;
+
+          &.icon-xialajiantou {
+            color: #666;
+            margin-top: -2px;
+          }
+        }
+      }
+    }
+  }
+
+  .login-btn {
+    width: calc(100% - 30px);
+    margin: 10px 15px;
+  }
+
+  .ma-list {
+    padding: 10px 10px 0 10px;
+
+    .van-swipe-cell {
+      margin-top: 10px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .panel-block {
+    padding: 15px 13px;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+
+    .panel-cont-wrap {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+
+    .van-icon-arrow-down {
+      width: 30px;
+      height: 40px;
+      margin-left: 10px;
+      font-size: 16px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .item-block {
+      width: 100%;
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 8px;
+
+      .change-btn {
+        width: 50px !important;
+        color: red;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 99;
+      }
+
+      &:last-child {
+        margin-bottom: 0
+      }
+
+      .line-name {
+        font-size: 13px;
+        color: #343434;
+        white-space: nowrap;
+      }
+
+      .line-content {
+        font-size: 13px;
+        color: #343434;
+        word-break: break-all;
+      }
+    }
+
+    & .item-action-list {
+      button {
+        word-break: keep-all;
+      }
+    }
+  }
+}

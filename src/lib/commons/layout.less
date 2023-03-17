@@ -1,0 +1,148 @@
+//-----------------------------框架列表周边---------------------------
+.list-wrap-layout {
+  .cf-field {
+    .van-tag {
+      padding: 0 6px;
+      font-size: 10px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .del-btn {
+    height: 100%;
+  }
+
+  .cc-panel-cell {
+    border-radius: 5px;
+
+    &.active {
+      border: 2px solid #3399FF;
+    }
+  }
+}
+
+//------------------------------框架表单周边----------------------------------
+.form-wrap-layout {
+  .van-sticky {
+    height: 70px;
+  }
+
+  .van-field__label {
+    min-width: 100px;
+    width: auto;
+    font-size: 14px;
+    color: #333;
+    margin-right: 0;
+  }
+
+  .w-auto {
+    .van-field__label {
+      min-width: auto;
+    }
+  }
+
+  .cf-field {
+    .van-tag {
+      padding: 0 6px;
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+      height: 24px;
+      min-width: 40px;
+      justify-content: center;
+    }
+
+    &.cf-field-input-select {
+      .van-field {
+        padding: 0 50px 0 0;
+        overflow: initial;
+      }
+
+      &.cf-field-input-select2 {
+        .van-field {
+          padding-right: 15px;
+        }
+      }
+
+      & .van-cell::after {
+        border: 0;
+      }
+
+      .arrow {
+        padding-left: 20px;
+      }
+    }
+  }
+
+  .ciie-star {
+    .cf-label {
+      position: relative;
+
+      &::before {
+        content: "*";
+        color: red;
+        position: absolute;
+        font-size: 14px;
+        left: -10px;
+        top: 0;
+      }
+    }
+
+    &.van-cell.van-field {
+      .van-field__label {
+        position: relative;
+
+        &::before {
+          content: "*";
+          color: red;
+          position: absolute;
+          font-size: 14px;
+          left: -10px;
+          top: 0;
+        }
+      }
+    }
+  }
+
+  &.only-read-panel {
+    & .ciie-star .cf-label::before {
+      content: "";
+    }
+
+    & .van-cell.van-field .van-field__label::before {
+      content: "";
+    }
+
+    & .cf-field.cf-field-input-select {
+      .van-field {
+        padding: 0 0 0 0;
+      }
+
+      .arrow {
+        padding-left: 20px;
+      }
+    }
+  }
+
+  .ciie-panel-content {}
+
+
+  .panel-block {
+    & .van-cell {
+      padding-left: 0;
+      z-index: 99;
+      position: relative;
+    }
+
+    & .van-collapse-item__content {
+      padding: 0;
+    }
+  }
+
+  & .van-ellipsis {
+    overflow: auto;
+    white-space: pre-wrap;
+  }
+}

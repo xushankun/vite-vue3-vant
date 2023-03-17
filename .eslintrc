@@ -1,0 +1,21 @@
+//.eslintrc
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "./.eslintrc-auto-import.json", /* vite-plugin-autoImport 插件的eslint规则 */
+    "code-style-lint-vue3-ts"
+  ],
+  "rules": {
+    // 0 = off, 1 = warn, 2 = error
+    "brace-style": "off",
+    "@typescript-eslint/brace-style": "off",
+    "vue/multi-word-component-names": "off",
+    "@typescript-eslint/ban-types": 0,
+    "@typescript-eslint/no-explicit-any": 0 // 忽略any 类型的warning
+    // "@typescript-eslint/no-unused-vars": 0    // 忽略变量定义了未使用的warning
+  }
+}
